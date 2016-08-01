@@ -32,12 +32,12 @@ namespace city_game
             if (num_famrers > num_farms) available_food = num_farms * farm_yield;
             else available_food = num_famrers*farm_yield;
 
-
-
             city_food.increment(available_food);
+            city_food.consume(people.get_num_children(), people.get_num_adults(), people.get_num_elderly());
+            city_food.decay();
 
 
-            people.Update(available_food);
+            people.Update(city_food);
         }
 
         public population get_population()
@@ -51,6 +51,10 @@ namespace city_game
         public string get_name()
         {
             return name;
+        }
+        public food get_food()
+        {
+            return city_food;
         }
     }
 }

@@ -55,7 +55,7 @@ namespace city_game
         {
 
             string starvation = "";
-            if (player_city.get_population().get_excess_food() < 0 && player_city.get_population().get_food_stockpile()==0) starvation = " Starvation!";
+            if (player_city.get_food().get_excess_rate() < 0 && player_city.get_food().get_amount()==0) starvation = " Starvation!";
 
             current_option = mouse_over();
 
@@ -70,20 +70,22 @@ namespace city_game
                     break;
 
                 case options.money:
-                    spriteBatch.DrawString(font, "Money: " + player_city.get_money() + " Employed adults: -" + "Unemployed adults: -", new Vector2(10, 10), Color.Black);
+                    spriteBatch.DrawString(font, "Money: " + player_city.get_money() +
+                        " Employed adults: -" +
+                        "Unemployed adults: -", new Vector2(10, 10), Color.Black);
 
                     break;
 
                 case options.food:
-                    spriteBatch.DrawString(font, "Food production: " + player_city.get_population().get_food_production() +
-                        " Food consumption: "+player_city.get_population().get_food_consumption()+
-                        " Food stockpile: "+Math.Round(player_city.get_population().get_food_stockpile(),1), new Vector2(10, 10), Color.Black);
+                    spriteBatch.DrawString(font, "Food production: " + player_city.get_food().get_production_rate() +
+                        " Food consumption: "+player_city.get_food().get_consumption_rate()+
+                        " Food stockpile: "+Math.Round(player_city.get_food().get_amount(),1), new Vector2(10, 10), Color.Black);
                     break;
 
                 default:
                     spriteBatch.DrawString(font, "Population: " + player_city.get_population().get_population() + starvation,
                 new Vector2(10, 10), Color.Black);
-                    spriteBatch.DrawString(font, "Food: " + player_city.get_population().get_food_production(), new Vector2(320, 10), Color.Black);
+                    spriteBatch.DrawString(font, "Food: " + player_city.get_food().get_production_rate(), new Vector2(320, 10), Color.Black);
                     
                     spriteBatch.DrawString(font, "Money: " + player_city.get_money(), new Vector2(520, 10), Color.Black);
                     break;

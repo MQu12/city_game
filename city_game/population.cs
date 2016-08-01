@@ -16,13 +16,9 @@ namespace city_game
         private int num_children = 0;
         private int num_adults = 0;
         private int num_elderly = 0;
-        private int birth_const = 2;
-        private double excess_food=0;
+        private int birth_const = 2;        
         private double threshold_food_excess = 2;
-        private double food_stockpile = 0;
-        private double food_decay_const = 0.4;
-        private double food_consumption = 0;
-        private double food_production = 0;
+        
 
         public population()
         {
@@ -46,10 +42,8 @@ namespace city_game
 
         }
 
-        public void Update(double available_food)
+        public void Update(food city_food)
         {
-
-            food_production = available_food;
             //Debug.WriteLine("------------------");
 
             for (int i = 0; i < people_list.Count; i++)
@@ -61,7 +55,7 @@ namespace city_game
                 //Debug.WriteLine(people_list[i].get_type());
                 
                 //kill citizen if true is returned
-                if (people_list[i].Update(excess_food,food_stockpile))
+                if (people_list[i].Update(city_food.get_excess_rate(),city_food.get_amount()))
                 {
 
                     //Debug.WriteLine("Killing citizen :'( ");
@@ -104,28 +98,15 @@ namespace city_game
                 }    
             }
             
-            //get food consumption
-            food_consumption = 2 * num_adults + num_children + 1.5 * num_elderly;
-
-            excess_food = available_food - food_consumption;
-
-            //excess food is added to stockpile
-            //this will drain if excess is negative
-            food_stockpile += excess_food;
-            //food decays exponentially
-            food_stockpile -= food_stockpile * food_decay_const;
-            //set to 0 if below 0
-            if (food_stockpile < 0) food_stockpile = 0;
-            
             num_citizens = people_list.Count;
 
             time_since_birth += 0.001;
 
             if (num_adults > 1)
             {
-                time_to_birth = 1 / (birth_const *(excess_food-threshold_food_excess)* num_adults);
+                time_to_birth = 1 / (birth_const *(city_food.get_excess_rate()-threshold_food_excess)* num_adults);
 
-                if (time_since_birth > time_to_birth && excess_food >= threshold_food_excess) birth();
+                if (time_since_birth > time_to_birth && city_food.get_excess_rate() >= threshold_food_excess) birth();
             }
             //Debug.WriteLine("------------------");
 
@@ -154,22 +135,6 @@ namespace city_game
         public int get_num_elderly()
         {
             return num_elderly;
-        }
-        public double get_excess_food()
-        {
-            return excess_food;
-        }
-        public double get_food_stockpile()
-        {
-            return food_stockpile;
-        }
-        public double get_food_production()
-        {
-            return food_production;
-        }
-        public double get_food_consumption()
-        {
-            return food_consumption;
         }
         public int get_employed_adults()
         {

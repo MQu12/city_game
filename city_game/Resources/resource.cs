@@ -21,7 +21,7 @@ namespace city_game
         {
             return amount;
         }
-        public void increment(double change)
+        public virtual void increment(double change)
         {
             amount += change;
             return;
