@@ -51,6 +51,8 @@
     <Compile Include="sidebar buttons\demolish_button.cs" />
     <Compile Include="sidebar buttons\make_farm_button.cs" />
     <Compile Include="population.cs" />
+    <Compile Include="sidebar buttons\mint_money_button.cs" />
+    <Compile Include="sidebar buttons\remove_money_button.cs" />
     <Compile Include="Sidebars\sidebar_menu_brownfield.cs" />
     <Compile Include="Sidebars\side_menu_concrete.cs" />
     <Compile Include="Sidebars\side_menu_copper_mine.cs" />

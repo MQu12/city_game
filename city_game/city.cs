@@ -7,21 +7,22 @@ namespace city_game
 {
     class city
     {
-        private string name = "Robeaton";
-        private double money=100;
+        private string name = "Robeaton";        
         private double total_hapiness;
         private population people;        
         private double available_food;        
         private int num_famrers;
         private double farm_yield=5;
         private food city_food;
-        private copper city_copper;       
+        private copper city_copper;
+        private money city_money;       
 
         public city()
         {
             people = new population(0, 2, 0);
             city_food = new food(0);
             city_copper = new copper(0);
+            city_money = new money(0);
         }
 
         public void Update(int num_farms, int num_copper_mines)
@@ -47,9 +48,9 @@ namespace city_game
         {
             return people;
         }
-        public double get_money()
+        public money get_money()
         {
-            return money;
+            return city_money;
         }
         public string get_name()
         {

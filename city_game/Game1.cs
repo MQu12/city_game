@@ -50,7 +50,7 @@ namespace city_game
         //and a city for the player
         private city player_city = new city();        
 
-        MouseState previous_mouse_state;
+        public static MouseState previous_mouse_state;
 
         public Game1()
         {
@@ -127,7 +127,7 @@ namespace city_game
             tile_textures["copper_mine"] = copper_mine_tile;
 
             Grid = new grid(tile_textures,previous_mouse_state);
-            side_bar = new sidebar(sidebar_font,sidebar_menu_font,sidebar_menu_button,sidebar_highlighter, ref Grid);
+            side_bar = new sidebar(sidebar_font,sidebar_menu_font,sidebar_menu_button,sidebar_highlighter, ref Grid,ref player_city);
 
         }
 
@@ -170,7 +170,7 @@ namespace city_game
 
             base.Update(gameTime);
 
-            
+            previous_mouse_state = Mouse.GetState();
         }
 
         /// <summary>

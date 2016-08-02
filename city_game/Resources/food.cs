@@ -20,6 +20,8 @@ namespace city_game
         private double consumption_rate;
         private double production_rate;
 
+        private double unit_value = 1;
+
         //stores the amount of excess food produced up to 10 turns ago
         private List<double> previous_production;   
 
@@ -100,6 +102,10 @@ namespace city_game
         public double get_excess_rate()
         {
             return production_rate - consumption_rate;
+        }
+        public double get_value()
+        {
+            return unit_value;
         }
 
     }

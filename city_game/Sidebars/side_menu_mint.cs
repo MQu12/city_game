@@ -9,11 +9,13 @@ namespace city_game
     class side_menu_mint:side_menu_base
     {
 
-        public side_menu_mint()
+        public side_menu_mint(ref city City)
         {
             buttons = new List<side_menu_button>();
             buttons.Add(new demolish_button(sidebar.get_start() + 10, 100));
-            buttons.Add(new cancel_button(sidebar.get_start() + 10, 140));
+            buttons.Add(new mint_money_button(sidebar.get_start() + 10, 140,ref City));
+            buttons.Add(new remove_money_button(sidebar.get_start() + 10, 180, ref City));
+            buttons.Add(new cancel_button(sidebar.get_start() + 10, 220));
 
         }
 

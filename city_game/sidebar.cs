@@ -22,8 +22,9 @@ namespace city_game
         private SpriteFont title_font;
         private side_menu_base menu;
         private grid Grid;
+        private city player_city;
 
-        public sidebar(SpriteFont titlefont, SpriteFont menufont, Texture2D menuitem, Texture2D menuHighlight, ref grid Grid_)
+        public sidebar(SpriteFont titlefont, SpriteFont menufont, Texture2D menuitem, Texture2D menuHighlight, ref grid Grid_, ref city City)
         {
 
             menu_item = menuitem;
@@ -31,6 +32,7 @@ namespace city_game
             title_font = titlefont;
             menu_font = menufont;
             Grid = Grid_;
+            player_city = City;
 
         }
 
@@ -71,7 +73,7 @@ namespace city_game
                         break;
 
                     case tile.states.mint:
-                        menu = new side_menu_mint();
+                        menu = new side_menu_mint(ref player_city);
                         break;
                 }
                 
