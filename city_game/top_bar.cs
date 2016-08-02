@@ -92,8 +92,6 @@ namespace city_game
 
                     break;
 
-                
-
                 default:
                     spriteBatch.DrawString(font, "Population: " + player_city.get_population().get_population() + starvation, 
                         new Vector2(10, 10), Color.Black);

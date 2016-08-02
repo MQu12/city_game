@@ -13,7 +13,7 @@ namespace city_game
         private population people;        
         private double available_food;        
         private int num_famrers;
-        private double farm_yield=4;
+        private double farm_yield=5;
         private food city_food;
         private copper city_copper;       
 

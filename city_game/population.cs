@@ -17,7 +17,7 @@ namespace city_game
         private int num_adults = 0;
         private int num_elderly = 0;
         private int birth_const = 2;        
-        private double threshold_food_excess = 2;
+        private double threshold_food_excess = 3;
         
 
         public population()

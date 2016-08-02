@@ -37,7 +37,7 @@ namespace city_game
                     x_pos = j * 85;
                     if (i == 4 && j == 6) tile_list[i].Add(new tile(textures, previous_mouse_state, x_pos, y_pos, tile.states.town_hall));
                     else if (i == 3 && j == 3) tile_list[i].Add(new tile(textures, previous_mouse_state, x_pos, y_pos, tile.states.copper_ore));
-
+                    else if (i == 3 && (j == 6 || j == 5)) tile_list[i].Add(new tile(textures, previous_mouse_state, x_pos, y_pos, tile.states.farm));
                     else
                         tile_list[i].Add(new tile(textures, previous_mouse_state, x_pos, y_pos, tile.states.grass));
 

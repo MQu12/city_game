@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Resources\food.cs" />
     <Compile Include="Resources\copper.cs" />
+    <Compile Include="Resources\money.cs" />
     <Compile Include="Resources\resource.cs" />
     <Compile Include="sidebar buttons\build_button.cs" />
     <Compile Include="sidebar buttons\build_mine_button.cs" />
