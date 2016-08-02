@@ -162,7 +162,7 @@ namespace city_game
             side_bar.Update(mouse_x, mouse_y);
 
             //and the player city
-            player_city.Update(Grid.get_num_farms());
+            player_city.Update(Grid.get_num_farms(),Grid.get_num_copper_mines());
 
             TopBar.Update(mouse_x, mouse_y);
 

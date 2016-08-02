@@ -24,9 +24,10 @@ namespace city_game
             city_copper = new copper(0);
         }
 
-        public void Update(int num_farms)
+        public void Update(int num_farms, int num_copper_mines)
         {            
 
+            //food update
             num_famrers = people.get_num_adults(); //for now, every adult will be a farmer
 
             if (num_famrers > num_farms) available_food = num_farms * farm_yield;
@@ -35,9 +36,11 @@ namespace city_game
             city_food.increment(available_food);
             city_food.consume(people.get_num_children(), people.get_num_adults(), people.get_num_elderly());
             city_food.decay();
-
-
             people.Update(city_food);
+
+            //copper update
+            city_copper.set_num_mines(num_copper_mines);
+
         }
 
         public population get_population()
@@ -55,6 +58,10 @@ namespace city_game
         public food get_food()
         {
             return city_food;
+        }
+        public copper get_copper()
+        {
+            return city_copper;
         }
     }
 }
