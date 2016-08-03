@@ -73,7 +73,7 @@ namespace city_game
                         break;
 
                     case tile.states.mint:
-                        menu = new side_menu_mint(ref player_city);
+                        menu = new side_menu_mint(player_city);
                         break;
                 }
                 

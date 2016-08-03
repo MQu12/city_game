@@ -19,6 +19,13 @@ namespace city_game
         {
             return strength;
         }
+        public void set_strength(double total_goods_value)
+        {
+
+            if (amount == 0) strength = 0;
+            else strength = total_goods_value / amount;
+            
+        }
         public string get_name()
         {
             return currency_name;

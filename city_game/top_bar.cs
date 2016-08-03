@@ -86,7 +86,7 @@ namespace city_game
                     break;
 
                 case options.money:
-                    spriteBatch.DrawString(font, "Money: " + player_city.get_money().get_amount() +
+                    spriteBatch.DrawString(font, "Money: " + player_city.get_money().get_amount() + " " + player_city.get_money().get_name() + "s" +
                         " Employed adults: -" +
                         "Unemployed adults: -", new Vector2(10, 10), Color.Black);
 
@@ -99,7 +99,7 @@ namespace city_game
                         new Vector2(food_start, 10), Color.Black);
                     spriteBatch.DrawString(font, "Copper: " + player_city.get_copper().get_amount(),
                         new Vector2(copper_start, 10), Color.Black);
-                    spriteBatch.DrawString(font, "Money: " + player_city.get_money().get_amount(), 
+                    spriteBatch.DrawString(font, "Money: " + player_city.get_money().get_amount()+" "+player_city.get_money().get_name()+"s", 
                         new Vector2(money_start, 10), Color.Black);
                     break;
             }

@@ -16,7 +16,8 @@ namespace city_game
         private double farm_yield=5;
         private food city_food;
         private copper city_copper;
-        private money city_money;       
+        private money city_money;
+        private double city_goods_value;      
 
         public city()
         {
@@ -33,12 +34,16 @@ namespace city_game
             num_famrers = people.get_num_adults(); //for now, every adult will be a farmer
 
             if (num_famrers > num_farms) available_food = num_farms * farm_yield;
-            else available_food = num_famrers*farm_yield;
+            else available_food = num_famrers*farm_yield;            
 
-            city_food.increment(available_food);
+            city_food.increment(available_food);   
             city_food.consume(people.get_num_children(), people.get_num_adults(), people.get_num_elderly());
             city_food.decay();
-            people.Update(city_food);            
+            people.Update(city_food);
+
+
+            city_goods_value = available_food;
+            city_money.set_strength(city_goods_value);
 
             //Debug.WriteLine("Copper: " + city_copper.get_amount());
 
@@ -63,6 +68,10 @@ namespace city_game
         public copper get_copper()
         {
             return city_copper;
+        }
+        public double get_goods_value()
+        {
+            return city_goods_value;
         }
     }
 }

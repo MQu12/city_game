@@ -12,6 +12,8 @@ namespace city_game
     {
         protected int num_options;
         protected List<side_menu_button> buttons;
+        protected city player_city;
+
         public static SpriteFont menu_font;
 
         public abstract void Update(float mouse_x, float mouse_y);
