@@ -10,15 +10,13 @@ using System.Diagnostics;
 namespace city_game
 {
     class mint_money_button: side_menu_button
-    {
+    {          
 
-        private city player_city;        
-
-        public mint_money_button(int x, int y,ref city City)
+        public mint_money_button(int x, int y, city player_city_)
         {
             x_pos = x;
             y_pos = y;
-            player_city = City;
+            player_city = player_city_;
         }
 
         public override void Update(float mouse_x, float mouse_y)
@@ -28,8 +26,14 @@ namespace city_game
             {               
                 if (Mouse.GetState().LeftButton == ButtonState.Pressed && Game1.previous_mouse_state.LeftButton==ButtonState.Released)
                 {
+                    //check player has enough copper to mint more money
+                   if (player_city.get_copper().get_amount() > 0) {     
+                                                                   
+                        player_city.get_copper().increment(-10);
+                        player_city.get_money().increment(10);
 
-                    player_city.get_money().increment(10);                   
+                   }
+                                    
 
                 }
             }            

@@ -24,7 +24,7 @@ namespace city_game
         private grid Grid;
         private city player_city;
 
-        public sidebar(SpriteFont titlefont, SpriteFont menufont, Texture2D menuitem, Texture2D menuHighlight, ref grid Grid_, ref city City)
+        public sidebar(SpriteFont titlefont, SpriteFont menufont, Texture2D menuitem, Texture2D menuHighlight, ref grid Grid_, city City)
         {
 
             menu_item = menuitem;
@@ -65,7 +65,7 @@ namespace city_game
                         break;
 
                     case tile.states.copper_ore:
-                        menu = new side_menu_copper_ore();
+                        menu = new side_menu_copper_ore(player_city);
                         break;
 
                     case tile.states.copper_mine:

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace city_game
 {
@@ -37,10 +38,9 @@ namespace city_game
             city_food.increment(available_food);
             city_food.consume(people.get_num_children(), people.get_num_adults(), people.get_num_elderly());
             city_food.decay();
-            people.Update(city_food);
+            people.Update(city_food);            
 
-            //copper update
-            city_copper.set_num_mines(num_copper_mines);
+            //Debug.WriteLine("Copper: " + city_copper.get_amount());
 
         }
 

@@ -10,10 +10,10 @@ namespace city_game
 {
     class side_menu_copper_ore:side_menu_base
     {
-        public side_menu_copper_ore()
+        public side_menu_copper_ore(city player_city)
         {
             buttons = new List<side_menu_button>();
-            buttons.Add(new build_mine_button(sidebar.get_start() + 10, 190));
+            buttons.Add(new build_mine_button(sidebar.get_start() + 10, 190,player_city));
             buttons.Add(new cancel_button(sidebar.get_start() + 10, 230));
 
         }

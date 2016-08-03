@@ -8,17 +8,16 @@ namespace city_game
     class copper:resource
     {
 
-        private double mine_yield = 100;
+        private static double mine_yield = 100;
 
         public copper(double amount_)
         {
             amount = amount_;
         }
-        public void set_num_mines(int num)
+      
+        public static double get_yield()
         {
-
-            amount = mine_yield * num;
-
+            return mine_yield;
         }
     }
 }

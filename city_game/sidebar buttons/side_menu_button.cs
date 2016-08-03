@@ -19,6 +19,9 @@ namespace city_game
         public static Texture2D highlighter;
         public static SpriteFont font;
 
+        protected city player_city;
+        protected grid Grid;
+
         public abstract void Update(float mouse_x, float mouse_y);
         public abstract void Draw(SpriteBatch spriteBatch);
 

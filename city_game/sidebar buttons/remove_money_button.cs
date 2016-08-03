@@ -9,10 +9,9 @@ using System.Diagnostics;
 
 namespace city_game
 {
-    class remove_money_button : side_menu_button
-    {
+    class remove_money_button : side_menu_button   {
 
-        private city player_city;
+        
 
         public remove_money_button(int x, int y, ref city City)
         {
@@ -28,9 +27,11 @@ namespace city_game
             {
                 if (Mouse.GetState().LeftButton == ButtonState.Pressed && Game1.previous_mouse_state.LeftButton == ButtonState.Released)
                 {
-
-                    player_city.get_money().increment(-10);                    
-
+                    if (player_city.get_money().get_amount() > 0)
+                    {
+                        player_city.get_money().increment(-10);
+                        player_city.get_copper().increment(10);
+                    }
                 }
             }
         }
