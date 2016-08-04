@@ -11,7 +11,7 @@ namespace city_game
         private string name = "Robeaton";        
         private double total_hapiness;
         private population people;        
-        private double available_food;        
+        private double new_food;        
         private int num_famrers;
         private double farm_yield=5;
         private food city_food;
@@ -33,17 +33,21 @@ namespace city_game
             //food update
             num_famrers = people.get_num_adults(); //for now, every adult will be a farmer
 
-            if (num_famrers > num_farms) available_food = num_farms * farm_yield;
-            else available_food = num_famrers*farm_yield;            
+            if (num_famrers > num_farms) new_food = num_farms * farm_yield;
+            else new_food = num_famrers*farm_yield;            
 
-            city_food.increment(available_food);   
+            city_food.increment(new_food);
+
+            //at each turn, total value of goods is calculated here
+            //total value is newly generated food + that carried over from last turn
+            city_goods_value = city_food.get_amount() * city_food.get_value();
+
             city_food.consume(people.get_num_children(), people.get_num_adults(), people.get_num_elderly());
             city_food.decay();
             people.Update(city_food);
-
-
-            city_goods_value = available_food;
-            city_money.set_strength(city_goods_value);
+            
+            //curency strength is determined by those goods produced on this turn
+            city_money.set_strength(new_food*city_food.get_value());
 
             //Debug.WriteLine("Copper: " + city_copper.get_amount());
 

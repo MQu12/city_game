@@ -20,6 +20,8 @@ namespace city_game
 
             player_city = City;
 
+
+
         }
 
         public override void Update(float mouse_x, float mouse_y)

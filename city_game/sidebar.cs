@@ -42,39 +42,43 @@ namespace city_game
             if (tile.selection)
             {
 
-                switch (grid.get_selected_tile().get_state())
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed 
+                    && Game1.previous_mouse_state.LeftButton==ButtonState.Released)
                 {
-                    case tile.states.grass:
-                        menu = new side_menu_grass(ref Grid);
-                        break;
+                    switch (grid.get_selected_tile().get_state())
+                    {
+                        case tile.states.grass:
+                            menu = new side_menu_grass(ref Grid);
+                            break;
 
-                    case tile.states.concrete:
-                        menu = new side_menu_concrete();
-                        break;
+                        case tile.states.concrete:
+                            menu = new side_menu_concrete();
+                            break;
 
-                    case tile.states.brownfield:
-                        menu = new side_menu_brownfield(ref Grid);
-                        break;
+                        case tile.states.brownfield:
+                            menu = new side_menu_brownfield(ref Grid);
+                            break;
 
-                    case tile.states.farm:
-                        menu = new side_menu_farm();
-                        break;
+                        case tile.states.farm:
+                            menu = new side_menu_farm();
+                            break;
 
-                    case tile.states.town_hall:
-                        menu = new side_menu_townhall();
-                        break;
+                        case tile.states.town_hall:
+                            menu = new side_menu_townhall();
+                            break;
 
-                    case tile.states.copper_ore:
-                        menu = new side_menu_copper_ore(player_city);
-                        break;
+                        case tile.states.copper_ore:
+                            menu = new side_menu_copper_ore(player_city);
+                            break;
 
-                    case tile.states.copper_mine:
-                        menu = new side_menu_copper_mine();
-                        break;
+                        case tile.states.copper_mine:
+                            menu = new side_menu_copper_mine();
+                            break;
 
-                    case tile.states.mint:
-                        menu = new side_menu_mint(player_city);
-                        break;
+                        case tile.states.mint:
+                            menu = new side_menu_mint(player_city);
+                            break;
+                    }
                 }
                 
                 menu.Update(mouse_x, mouse_y);

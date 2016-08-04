@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 
 namespace city_game
 {
@@ -16,6 +17,8 @@ namespace city_game
 
             x_pos = x;
             y_pos = y;
+
+            Debug.WriteLine("Cancel constructor");
 
         }
 

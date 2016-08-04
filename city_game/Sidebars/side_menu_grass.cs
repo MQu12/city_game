@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 
 namespace city_game
 {
@@ -38,7 +39,9 @@ namespace city_game
             buttons.Add(new build_button(sidebar.get_start() + 10, 100+displace_button));
             buttons.Add(new make_farm_button(sidebar.get_start() + 10, 140+displace_button));
             buttons.Add(new cancel_button(sidebar.get_start()+10,180+displace_button));
-            
+
+            Debug.WriteLine("Grass menu constructor");
+
         }
         
         public override void Update(float mouse_x, float mouse_y)
