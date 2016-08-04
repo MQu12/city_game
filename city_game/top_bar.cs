@@ -87,8 +87,8 @@ namespace city_game
 
                 case options.money:
                     spriteBatch.DrawString(font, "Money: " + player_city.get_money().get_amount() + " " + player_city.get_money().get_name() + "s" +
-                        " Employed adults: -" +
-                        "Unemployed adults: -", new Vector2(10, 10), Color.Black);
+                        " Employed adults: "+player_city.get_population().get_employed_adults() +
+                        "Unemployed adults: "+(player_city.get_population().get_population() - player_city.get_population().get_employed_adults()), new Vector2(10, 10), Color.Black);
 
                     break;
 

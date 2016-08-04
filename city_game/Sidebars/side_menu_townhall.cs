@@ -40,6 +40,11 @@ namespace city_game
                 buttons[i].Draw(spriteBatch);
 
             }
+
+            spriteBatch.DrawString(menu_font, "Farmers: " + player_city.get_population().get_employment()[citizen.occupations.farmer]
+                + "\nBuilders: " + player_city.get_population().get_employment()[citizen.occupations.builder],
+                new Vector2(sidebar.get_start() + 10, 260), Color.Black);
+
         }
 
         public static void set_city(city City)

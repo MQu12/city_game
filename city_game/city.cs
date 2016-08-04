@@ -17,24 +17,26 @@ namespace city_game
         private food city_food;
         private copper city_copper;
         private money city_money;
-        private double city_goods_value;      
+        private double city_goods_value;
+        private grid Grid;      
 
         public city()
         {
             people = new population(0, 2, 0);
             city_food = new food(0);
             city_copper = new copper(0);
-            city_money = new money(0);
+            city_money = new money(0);            
         }
 
         public void Update(int num_farms, int num_copper_mines)
-        {            
+        {
+            //set jobs
+            people.set_jobs();
 
             //food update
-            num_famrers = people.get_num_adults(); //for now, every adult will be a farmer
+            num_famrers = people.get_employment()[citizen.occupations.farmer];
 
-            if (num_famrers > num_farms) new_food = num_farms * farm_yield;
-            else new_food = num_famrers*farm_yield;            
+            new_food = num_famrers*farm_yield;            
 
             city_food.increment(new_food);
 
@@ -76,6 +78,10 @@ namespace city_game
         public double get_goods_value()
         {
             return city_goods_value;
+        }
+        public void set_grid(grid Grid_)
+        {
+            Grid = Grid_;
         }
     }
 }

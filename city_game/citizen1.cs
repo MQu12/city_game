@@ -9,7 +9,7 @@ namespace city_game
     class citizen
     {
 
-        public enum occupations { unemployed, farmer, shop_assistant};
+        public enum occupations { unemployed, farmer, builder, miner};
         public enum types { child, adult, elderly}; //0-17 child 18-59 adult 60+ elderly
 
         private double age = 0;
@@ -20,7 +20,7 @@ namespace city_game
         private static Random random = new Random();
         private string name = "Dave Trotter"; //this will be variable at some point
         private int happiness = 1;
-        private double hunger = 0;
+        private double hunger = 0;        
        
         //creates a child
         public citizen()
@@ -80,7 +80,7 @@ namespace city_game
         public void set_occupation(occupations new_occupation)
         {
             if (type == types.adult) occupation = new_occupation; //set occupation here
-            else new_occupation = occupations.unemployed; //only adults can be employed
+            else new_occupation = occupations.unemployed; //only adults can be employed            
         }
 
         public bool kill()
@@ -103,6 +103,7 @@ namespace city_game
             if (age < 18) type = types.child;
             else if (age < 65) type = types.adult;
             else type = types.elderly;
+                
 
             //test  death conditions
             //starvation
@@ -143,9 +144,14 @@ namespace city_game
         {
             return happiness;
         }
+        public occupations get_occupation()
+        {
+            return occupation;
+        }
 
         private double threshold_hunger()
         {
+            //complicated function to determine max allowable hunger
             double a = -2.45;
             double c = 0.00008;
             double d = 2.49;

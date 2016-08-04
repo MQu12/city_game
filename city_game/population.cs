@@ -16,8 +16,11 @@ namespace city_game
         private int num_children = 0;
         private int num_adults = 0;
         private int num_elderly = 0;
-        private int birth_const = 2;        
+        private int birth_const = 2;
+        private int employed_adults = 0;    
         private double threshold_food_excess = 3;
+        private grid Grid;
+        private Dictionary<citizen.occupations, int> occupation_count;
         
 
         public population()
@@ -25,6 +28,12 @@ namespace city_game
 
             people_list = new List<citizen>();
 
+            //initialise amount of each occupation to 0
+            occupation_count = new Dictionary<citizen.occupations, int>();
+            foreach(citizen.occupations occupation in Enum.GetValues(typeof(citizen.occupations)))
+            {
+                occupation_count[occupation] = 0;
+            }
         }
         public population(int initial_children, int initial_adults, int initial_elderly)
         {
@@ -40,6 +49,12 @@ namespace city_game
             num_elderly = initial_elderly;
             num_citizens = initial_adults + initial_children + initial_elderly;
 
+            //initialise amount of each occupation to 0
+            occupation_count = new Dictionary<citizen.occupations, int>();
+            foreach (citizen.occupations occupation in Enum.GetValues(typeof(citizen.occupations)))
+            {
+                occupation_count[occupation] = 0;
+            }
         }
 
         public void Update(food city_food)
@@ -65,7 +80,11 @@ namespace city_game
                     //decrement relevant counters
                     num_citizens--;
                     if (people_list[i].get_type() == citizen.types.child) num_children--;
-                    else if (people_list[i].get_type() == citizen.types.adult) num_adults--;
+                    else if (people_list[i].get_type() == citizen.types.adult)
+                    {
+                        num_adults--;
+                        occupation_count[people_list[i].get_occupation()]--;
+                    }
                     else num_elderly--;
 
                     //remove from list
@@ -93,6 +112,9 @@ namespace city_game
                         {
                             num_elderly++;
                             num_adults--;
+                            //elderly can't have jobs
+                            occupation_count[people_list[i].get_occupation()]--;
+                            people_list[i].set_occupation(citizen.occupations.unemployed);
                         }
                     }         
                 }    
@@ -110,6 +132,18 @@ namespace city_game
             }
             //Debug.WriteLine("------------------");
 
+
+            //now check contents of occupation_count
+
+            employed_adults = 0;
+
+            foreach (citizen.occupations occupation in Enum.GetValues(typeof(citizen.occupations)))
+            {
+
+                if (occupation == citizen.occupations.unemployed) continue;
+                employed_adults += occupation_count[occupation];
+
+            }
         }
 
         public void birth()
@@ -120,6 +154,30 @@ namespace city_game
             num_children++;
 
         }
+        public void set_jobs()
+        {
+            //cycle over citizens and set employment for those who are adult and unemolyed
+            for(int i=0; i<people_list.Count; i++)
+            {
+                if (people_list[i].get_type() != citizen.types.adult
+                    || people_list[i].get_occupation() != citizen.occupations.unemployed) continue;
+                //farmers are the priority, assign them first
+
+                if (Grid.get_num_farms() > occupation_count[citizen.occupations.farmer])
+                {
+                    people_list[i].set_occupation(citizen.occupations.farmer);
+                    occupation_count[citizen.occupations.farmer]++;
+                }
+
+            }
+
+        }
+
+        public Dictionary<citizen.occupations,int> get_employment()
+        {
+            return occupation_count;
+        }
+
         public int get_population()
         {
             return num_citizens;
@@ -138,7 +196,11 @@ namespace city_game
         }
         public int get_employed_adults()
         {
-            return 0;
+            return employed_adults;
+        }
+        public void set_grid(grid Grid_)
+        {
+            Grid = Grid_;
         }
 
 

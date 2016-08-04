@@ -129,6 +129,9 @@ namespace city_game
             Grid = new grid(tile_textures,previous_mouse_state);
             side_bar = new sidebar(sidebar_font,sidebar_menu_font,sidebar_menu_button,sidebar_highlighter, ref Grid, player_city);
 
+            player_city.set_grid(Grid);
+            player_city.get_population().set_grid(Grid);
+
         }
 
         /// <summary>
