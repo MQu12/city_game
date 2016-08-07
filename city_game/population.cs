@@ -202,6 +202,10 @@ namespace city_game
         {
             Grid = Grid_;
         }
+        public List<citizen> get_citizens()
+        {
+            return people_list;
+        }
 
 
 

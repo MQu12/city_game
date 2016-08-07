@@ -4,21 +4,21 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/concrete_tile.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/grass_tile.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/highlighter.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/interface.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/sidebar_font.spritefont</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/topbar_font.spritefont</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/sidebar_menu_font.spritefont</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/blue_highlighter.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/button_highlighter.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/menu_button.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/brownfield.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/farm.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/town_hall.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/copper_ore.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/mint.png</File>
-    <File>C:/Users/Tom/Google Drive/Documents/Games/city_game/city_game/Content/copper_mine.png</File>
+    <File>D:/city_game/city_game/Content/concrete_tile.png</File>
+    <File>D:/city_game/city_game/Content/grass_tile.png</File>
+    <File>D:/city_game/city_game/Content/highlighter.png</File>
+    <File>D:/city_game/city_game/Content/interface.png</File>
+    <File>D:/city_game/city_game/Content/sidebar_font.spritefont</File>
+    <File>D:/city_game/city_game/Content/topbar_font.spritefont</File>
+    <File>D:/city_game/city_game/Content/sidebar_menu_font.spritefont</File>
+    <File>D:/city_game/city_game/Content/blue_highlighter.png</File>
+    <File>D:/city_game/city_game/Content/button_highlighter.png</File>
+    <File>D:/city_game/city_game/Content/menu_button.png</File>
+    <File>D:/city_game/city_game/Content/brownfield.png</File>
+    <File>D:/city_game/city_game/Content/farm.png</File>
+    <File>D:/city_game/city_game/Content/town_hall.png</File>
+    <File>D:/city_game/city_game/Content/copper_ore.png</File>
+    <File>D:/city_game/city_game/Content/mint.png</File>
+    <File>D:/city_game/city_game/Content/copper_mine.png</File>
   </SourceFiles>
 </SourceFileCollection>

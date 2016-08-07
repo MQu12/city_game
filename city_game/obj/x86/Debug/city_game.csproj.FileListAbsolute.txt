@@ -1,41 +1,41 @@
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\concrete_tile.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\grass_tile.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\highlighter.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\interface.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\city_game.exe
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\city_game.pdb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\MonoGame.Framework.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.MediaFoundation.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.XAudio2.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.Direct3D11.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.DXGI.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.Direct2D1.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.XInput.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.RawInput.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.Direct3D9.dll
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\MonoGame.Framework.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.MediaFoundation.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.XAudio2.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.Direct3D11.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.DXGI.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.Direct2D1.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.XInput.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.RawInput.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\SharpDX.Direct3D9.xml
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\obj\x86\Debug\city_game.csprojResolveAssemblyReference.cache
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\obj\x86\Debug\city_game.exe
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\obj\x86\Debug\city_game.pdb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\blue_highlighter.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\sidebar_font.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\sidebar_menu_font.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\topbar_font.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\button_highlighter.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\menu_button.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\brownfield.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\farm.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\town_hall.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\copper_ore.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\mint.xnb
-C:\Users\Tom\Google Drive\Documents\Games\city_game\city_game\bin\Windows\Debug\Content\copper_mine.xnb
+D:\city_game\city_game\obj\x86\Debug\city_game.csprojResolveAssemblyReference.cache
+D:\city_game\city_game\bin\Windows\x86\Debug\city_game.exe
+D:\city_game\city_game\bin\Windows\x86\Debug\city_game.pdb
+D:\city_game\city_game\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+D:\city_game\city_game\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+D:\city_game\city_game\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+D:\city_game\city_game\obj\x86\Debug\city_game.exe
+D:\city_game\city_game\obj\x86\Debug\city_game.pdb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\blue_highlighter.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\brownfield.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\button_highlighter.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\concrete_tile.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\copper_mine.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\copper_ore.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\farm.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\grass_tile.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\highlighter.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\interface.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\menu_button.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\mint.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\sidebar_font.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\sidebar_menu_font.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\topbar_font.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\town_hall.xnb

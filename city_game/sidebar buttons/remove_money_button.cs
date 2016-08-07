@@ -31,6 +31,7 @@ namespace city_game
                     {
                         player_city.get_money().increment(-10);
                         player_city.get_copper().increment(10);
+                        player_city.incremenet_total_minted_money(-10);
                     }
                 }
             }

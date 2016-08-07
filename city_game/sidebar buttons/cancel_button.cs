@@ -18,7 +18,7 @@ namespace city_game
             x_pos = x;
             y_pos = y;
 
-            Debug.WriteLine("Cancel constructor");
+            //Debug.WriteLine("Cancel constructor");
 
         }
 

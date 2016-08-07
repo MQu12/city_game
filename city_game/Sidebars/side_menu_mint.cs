@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 namespace city_game
 {
     class side_menu_mint:side_menu_base
@@ -45,6 +46,7 @@ namespace city_game
             spriteBatch.DrawString(menu_font, "Total goods\nvalue: " + player_city.get_goods_value() + 
                 "\n"+player_city.get_money().get_name()+" strength: "+player_city.get_money().get_strength(),
                 new Vector2(sidebar.get_start() + 10, 260), Color.Black);
+            //Debug.WriteLine("Ningi strength: " + player_city.get_money().get_strength());
         }
 
     }

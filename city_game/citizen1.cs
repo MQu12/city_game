@@ -20,7 +20,8 @@ namespace city_game
         private static Random random = new Random();
         private string name = "Dave Trotter"; //this will be variable at some point
         private int happiness = 1;
-        private double hunger = 0;        
+        private double hunger = 0;
+        private Dictionary<string,money> person_money = new Dictionary<string, money>(); //string stores the name of the currency        
        
         //creates a child
         public citizen()
@@ -128,6 +129,57 @@ namespace city_game
             return kill();
 
         }
+
+        public void pay(double amount, string currency)
+        {
+
+            if (amount < 0)
+            {
+                Debug.WriteLine("Error. Negative argument in citizen.pay method.");
+                Environment.Exit(1);
+            }
+
+            bool paid = false; //true when person has been paid
+
+            foreach(KeyValuePair<string,money> kvp in person_money)
+            {
+                if(kvp.Key == currency) //currency exists in map
+                {
+                    person_money[kvp.Key].increment(amount);
+                    paid = true; //now paid
+                    break;
+                }
+            }
+            if (!paid) //if not paid, create a new entry in the dictionary
+            {
+                person_money[currency] = new money(amount, currency);
+            }
+
+        }
+
+        public double charge(double amount, string currency) //charge the person
+            //returns the amount that hasn't been charged
+        {           
+
+            foreach (KeyValuePair<string, money> kvp in person_money)
+            {
+                if (kvp.Key == currency) //currency exists in map
+                {
+                    person_money[kvp.Key].increment(-amount);
+                    if (person_money[kvp.Key].get_amount() < 0)
+                    {
+                        double unpaid = -person_money[kvp.Key].get_amount();
+                        person_money[kvp.Key].set_amount(0);
+                        return unpaid;                        
+                    }
+                    else return 0;
+                }
+            }
+
+            return amount;
+            
+        }
+
         public types get_type()
         {
 

@@ -40,7 +40,7 @@ namespace city_game
             buttons.Add(new make_farm_button(sidebar.get_start() + 10, 140+displace_button));
             buttons.Add(new cancel_button(sidebar.get_start()+10,180+displace_button));
 
-            Debug.WriteLine("Grass menu constructor");
+            //Debug.WriteLine("Grass menu constructor");
 
         }
         
