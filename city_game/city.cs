@@ -30,7 +30,7 @@ namespace city_game
             city_food = new food(0);
             city_copper = new copper(0);
             city_money = new money(0,currency);
-            wages[citizen.occupations.farmer] = 0.01;           
+            wages[citizen.occupations.farmer] = 0;           
         }
 
         public void Update(int num_farms, int num_copper_mines)
@@ -38,12 +38,8 @@ namespace city_game
             //set jobs
             people.set_jobs();
 
-            //pay workers and charge for food
-            if (total_minted_money > 0)
-            {
-                pay_wages();
-                charge_for_food();
-            }
+            
+            
             //food update
             num_famrers = people.get_employment()[citizen.occupations.farmer];
             new_food = num_famrers*farm_yield;            
@@ -57,7 +53,13 @@ namespace city_game
             //calculate price of food
             food_price = total_minted_money / ( city_food.get_amount());
 
-            
+            //pay workers and charge for food
+            if (total_minted_money > 0)
+            {
+                wages[citizen.occupations.farmer] = food_price + 0.01;
+                pay_wages();
+                charge_for_food();
+            }
 
             city_food.consume(people.get_num_children(), people.get_num_adults(), people.get_num_elderly());
             city_food.decay();     
