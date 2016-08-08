@@ -19,7 +19,7 @@ namespace city_game
         private types type;
         private static Random random = new Random();
         private static Random rand_name = new Random();        
-        private string name = "Dave Trotter"; //this will be variable at some point
+        private string name = "Dave Trotter";
         private int happiness = 1;
         private double hunger = 0;
         private Dictionary<string,money> person_money = new Dictionary<string, money>(); //string stores the name of the currency        

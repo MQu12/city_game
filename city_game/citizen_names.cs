@@ -72,6 +72,7 @@ namespace city_game
             surnames.Add("Reynolds");
             surnames.Add("Sharp");
             surnames.Add("Trotter");
+            surnames.Add("Vallance");
             surnames.Add("Woods");
 
         }

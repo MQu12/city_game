@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="citizen_names.cs" />
+    <Compile Include="Dialogs\base_dialog.cs" />
     <Compile Include="sidebar buttons\build_button.cs" />
     <Compile Include="sidebar buttons\build_mine_button.cs" />
     <Compile Include="sidebar buttons\build_mint_button.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="sidebar buttons\make_farm_button.cs" />
     <Compile Include="sidebar buttons\mint_money_button.cs" />
     <Compile Include="sidebar buttons\remove_money_button.cs" />
+    <Compile Include="sidebar buttons\show_citizen_list.cs" />
     <Compile Include="sidebar buttons\side_menu_button.cs" />
     <Compile Include="sidebar.cs" />
     <Compile Include="Sidebars\sidebar_menu_brownfield.cs" />

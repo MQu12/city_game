@@ -39,3 +39,6 @@ D:\city_game\city_game\bin\Windows\x86\Debug\Content\sidebar_font.xnb
 D:\city_game\city_game\bin\Windows\x86\Debug\Content\sidebar_menu_font.xnb
 D:\city_game\city_game\bin\Windows\x86\Debug\Content\topbar_font.xnb
 D:\city_game\city_game\bin\Windows\x86\Debug\Content\town_hall.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\dialog_bkg.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\dialog_exit.xnb
+D:\city_game\city_game\bin\Windows\x86\Debug\Content\dialog_topbar.xnb

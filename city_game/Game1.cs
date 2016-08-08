@@ -34,6 +34,9 @@ namespace city_game
         private Texture2D copper_ore_tile;
         private Texture2D mint_tile;
         private Texture2D copper_mine_tile;
+        private Texture2D dialog_bkg;
+        private Texture2D dialog_topbar;
+        private Texture2D dialog_exit_button;
 
         private SpriteFont sidebar_font;
         private SpriteFont sidebar_menu_font;
@@ -103,17 +106,25 @@ namespace city_game
             copper_ore_tile = Content.Load<Texture2D>("copper_ore");
             mint_tile = Content.Load<Texture2D>("mint");
             copper_mine_tile = Content.Load<Texture2D>("copper_mine");
+            dialog_bkg = Content.Load<Texture2D>("dialog_bkg");
+            dialog_topbar = Content.Load<Texture2D>("dialog_topbar");
+            dialog_exit_button = Content.Load<Texture2D>("dialog_exit");
 
             sidebar_font = Content.Load<SpriteFont>("sidebar_font");
             sidebar_menu_font = Content.Load<SpriteFont>("sidebar_menu_font");
             topbar_font = Content.Load<SpriteFont>("topbar_font");
-
+            
             //pass textures and spritefonts to relevant classes
             side_menu_button.sidebar_menu_button = sidebar_menu_button;
             side_menu_button.highlighter = sidebar_highlighter;
             side_menu_button.font = sidebar_menu_font;
             top_bar.font = topbar_font;
             side_menu_base.menu_font = sidebar_menu_font;
+
+            base_dialog.font = sidebar_menu_font;
+            base_dialog.tex_bkg = dialog_bkg;
+            base_dialog.tex_topbar = dialog_topbar;
+            base_dialog.tex_exit_button = dialog_exit_button;
 
             tile_textures["farm"] = farm_tile;
             tile_textures["grass"] = grass_tile;

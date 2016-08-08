@@ -20,5 +20,8 @@
     <File>D:/city_game/city_game/Content/copper_ore.png</File>
     <File>D:/city_game/city_game/Content/mint.png</File>
     <File>D:/city_game/city_game/Content/copper_mine.png</File>
+    <File>D:/city_game/city_game/Content/dialog_bkg.png</File>
+    <File>D:/city_game/city_game/Content/dialog_exit.png</File>
+    <File>D:/city_game/city_game/Content/dialog_topbar.png</File>
   </SourceFiles>
 </SourceFileCollection>

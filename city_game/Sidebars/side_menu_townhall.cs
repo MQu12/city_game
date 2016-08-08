@@ -16,8 +16,9 @@ namespace city_game
 
         public side_menu_townhall()
         {
-            buttons = new List<side_menu_button>();            
-            buttons.Add(new cancel_button(sidebar.get_start() + 10, 140));
+            buttons = new List<side_menu_button>();
+            buttons.Add(new show_citizen_list(sidebar.get_start() + 10, 140));            
+            buttons.Add(new cancel_button(sidebar.get_start() + 10, 180));
         }
 
         public override void Update(float mouse_x, float mouse_y)
