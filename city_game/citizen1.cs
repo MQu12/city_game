@@ -18,6 +18,7 @@ namespace city_game
         private occupations occupation = occupations.unemployed;
         private types type;
         private static Random random = new Random();
+        private static Random rand_name = new Random();        
         private string name = "Dave Trotter"; //this will be variable at some point
         private int happiness = 1;
         private double hunger = 0;
@@ -29,6 +30,10 @@ namespace city_game
             type = types.child;
             set_lifetime();
             //Debug.WriteLine("Lifetime: " + lifetime);
+            int i = rand_name.Next(0, citizen_names.get_num_forenames());
+            int j = rand_name.Next(0, citizen_names.get_num_surnames());
+
+            name = citizen_names.get_name(i, j);
 
         }
         //create specified type
@@ -90,7 +95,7 @@ namespace city_game
 
             if (age < lifetime) return false; //survive
             else {
-                Debug.WriteLine("Citizen " + name + " died of old age");
+                //Debug.WriteLine("Citizen " + name + " died of old age");
                 return true; // ...sorry
             }
         }
@@ -147,6 +152,7 @@ namespace city_game
                 {
                     person_money[kvp.Key].increment(amount);
                     paid = true; //now paid
+                    Debug.WriteLine("Citizen " + name + " was paid " + amount + "N.");
                     break;
                 }
             }
@@ -170,12 +176,17 @@ namespace city_game
                     {
                         double unpaid = -person_money[kvp.Key].get_amount();
                         person_money[kvp.Key].set_amount(0);
-                        return unpaid;                        
+                        Debug.WriteLine("Citizen " + name + " was charged " + amount + "N for food, "+unpaid + " unpaid.");
+                        return unpaid;
                     }
-                    else return 0;
+                    else
+                    {
+                        Debug.WriteLine("Citizen " + name + " was charged " + amount + "N for food, 0 unpaid.");
+                        return 0;
+                    }
                 }
             }
-
+            Debug.WriteLine("Citizen " + name + " was charged " + amount + "N for food, all unpaid.");
             return amount;
             
         }

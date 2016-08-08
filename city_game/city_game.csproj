@@ -38,6 +38,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="citizen_names.cs" />
     <Compile Include="sidebar buttons\build_button.cs" />
     <Compile Include="sidebar buttons\build_mine_button.cs" />
     <Compile Include="sidebar buttons\build_mint_button.cs" />
