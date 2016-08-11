@@ -15,7 +15,7 @@ namespace city_game
     {
 
         private List<citizen> citizen_list;
-        private bool close = false;
+        
 
         public citizen_list_dialog(List<citizen> citizens)
         {
@@ -25,19 +25,17 @@ namespace city_game
 
         public override void Update()
         {
-            
+            mouse_click();
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
 
-            spriteBatch.Draw(tex_bkg, new Rectangle(x_start, y_start, width+200, height+100), Color.White);
+            spriteBatch.Draw(tex_bkg, new Rectangle(x_start, y_start, width, height), Color.White);
+            spriteBatch.Draw(tex_topbar, new Rectangle(x_start, y_start, width, 30), Color.White);
+            spriteBatch.Draw(tex_exit_button, new Vector2(x_start+width-30,y_start), Color.White);
             //Debug.WriteLine("Drawing dialog");
 
-        }
-        public bool close_dialog()
-        {
-            return close;
         }
 
     }

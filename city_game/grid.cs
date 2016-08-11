@@ -58,7 +58,9 @@ namespace city_game
             {
                 for (int j = 0; j < tile_list[i].Count; j++)
                 {                    
-                    if (tile_list[i][j].Update(mouse_x, mouse_y) && Mouse.GetState().LeftButton == ButtonState.Pressed && previous_mouse_state.LeftButton == ButtonState.Released)
+                    if (tile_list[i][j].Update(mouse_x, mouse_y) 
+                        && Mouse.GetState().LeftButton == ButtonState.Pressed 
+                        && Game1.previous_mouse_state.LeftButton == ButtonState.Released)
                     {
 
                         tile.selected_sq[0] = i;

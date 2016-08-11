@@ -55,11 +55,17 @@ namespace city_game
             }
 
             if (dialog_open)
+            {
                 if (dialog.close_dialog())
                 {
                     dialog = null;
                     dialog_open = false;
                 }
+                else
+                {
+                    dialog.Update();
+                }
+            }
 
         }
 

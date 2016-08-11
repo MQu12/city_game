@@ -171,7 +171,7 @@ namespace city_game
             mouse_y = mouse_state.Y;
 
             //update the grid when dialoogs are not open
-            Debug.WriteLine(side_bar.is_dialog_open());
+            //Debug.WriteLine(side_bar.is_dialog_open());
             if (!side_bar.is_dialog_open())
                 Grid.Update(mouse_x, mouse_y);
 

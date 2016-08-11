@@ -24,6 +24,7 @@ namespace city_game
         private side_menu_base menu;
         private grid Grid;
         private city player_city;
+        private bool dialog_open = false;
 
         public sidebar(SpriteFont titlefont, SpriteFont menufont, Texture2D menuitem, Texture2D menuHighlight, ref grid Grid_, city City)
         {
@@ -42,9 +43,8 @@ namespace city_game
 
             if (tile.selection)
             {
-
-                if (Mouse.GetState().LeftButton == ButtonState.Pressed 
-                    && Game1.previous_mouse_state.LeftButton==ButtonState.Released)
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed
+                    && Game1.previous_mouse_state.LeftButton == ButtonState.Released && !dialog_open)
                 {
                     switch (grid.get_selected_tile().get_state())
                     {
@@ -81,7 +81,7 @@ namespace city_game
                             break;
                     }
                 }
-                
+
                 menu.Update(mouse_x, mouse_y);                
 
             }
@@ -103,7 +103,8 @@ namespace city_game
                 spriteBatch.DrawString(title_font, tile_type, new Vector2(start_of_bar + 10, 50), Color.Blue);
 
                 //draw menu
-                menu.Draw(spriteBatch);
+                if (menu != null)
+                    menu.Draw(spriteBatch);
 
 
             }
@@ -112,11 +113,17 @@ namespace city_game
 
         public bool is_dialog_open()
         {
-            if (tile.selection && menu.is_dialog_open())
-            {
-                Debug.WriteLine("Dialog open");
-                return true;
-            }
+            if (menu != null)
+                if (tile.selection && menu.is_dialog_open())
+                {
+                    //Debug.WriteLine("Dialog open");
+                    dialog_open = true;
+                    return true;
+                }
+                else {
+                    dialog_open = false;
+                    return false;
+                }
             else return false;
         }
 
