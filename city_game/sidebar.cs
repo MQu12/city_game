@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 
 namespace city_game
 {
@@ -81,7 +82,7 @@ namespace city_game
                     }
                 }
                 
-                menu.Update(mouse_x, mouse_y);
+                menu.Update(mouse_x, mouse_y);                
 
             }
 
@@ -107,6 +108,16 @@ namespace city_game
 
             }
 
+        }
+
+        public bool is_dialog_open()
+        {
+            if (tile.selection && menu.is_dialog_open())
+            {
+                Debug.WriteLine("Dialog open");
+                return true;
+            }
+            else return false;
         }
 
         public static int get_start()

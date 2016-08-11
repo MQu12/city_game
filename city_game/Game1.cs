@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace city_game
 {
@@ -169,8 +170,10 @@ namespace city_game
             mouse_x = mouse_state.X;
             mouse_y = mouse_state.Y;
 
-            //update the grid
-            Grid.Update(mouse_x, mouse_y);
+            //update the grid when dialoogs are not open
+            Debug.WriteLine(side_bar.is_dialog_open());
+            if (!side_bar.is_dialog_open())
+                Grid.Update(mouse_x, mouse_y);
 
             //and the sidebar
             side_bar.Update(mouse_x, mouse_y);
@@ -194,7 +197,9 @@ namespace city_game
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            
+
+            Grid.Draw(spriteBatch);
+
             spriteBatch.Begin();
 
             spriteBatch.Draw(interface_tex, new Rectangle(0,0,1280, 720), Color.White);
@@ -205,7 +210,7 @@ namespace city_game
 
             spriteBatch.End();
 
-            Grid.Draw(spriteBatch);            
+              
 
             base.Draw(gameTime);
         }    

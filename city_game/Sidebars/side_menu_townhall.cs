@@ -17,7 +17,7 @@ namespace city_game
         public side_menu_townhall()
         {
             buttons = new List<side_menu_button>();
-            buttons.Add(new show_citizen_list(sidebar.get_start() + 10, 140));            
+            buttons.Add(new show_citizen_list(sidebar.get_start() + 10, 140, player_city.get_population().get_citizens()));            
             buttons.Add(new cancel_button(sidebar.get_start() + 10, 180));
         }
 
@@ -54,6 +54,7 @@ namespace city_game
             player_city = City;
 
         }
+        
 
     }
 }

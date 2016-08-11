@@ -38,6 +38,10 @@ namespace city_game
                 return false;
             }
         }
+        public virtual bool is_dialog_open()
+        {
+            return false;
+        }
 
     }
 }

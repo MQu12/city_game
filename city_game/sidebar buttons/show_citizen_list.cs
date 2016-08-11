@@ -6,17 +6,23 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Diagnostics;
 
 namespace city_game
 {
     class show_citizen_list : side_menu_button
     {
 
-        public show_citizen_list(int x, int y)
+        private bool dialog_open = false;
+        private citizen_list_dialog dialog;
+        private List<citizen> citizens;
+
+        public show_citizen_list(int x, int y, List<citizen> citizen_list)
         {
 
             x_pos = x;
-            y_pos = y;            
+            y_pos = y;
+            citizens = citizen_list;
 
         }
 
@@ -30,9 +36,30 @@ namespace city_game
                 {
 
                     //show dialog
+                    if (!dialog_open)
+                    {
+
+                        Debug.WriteLine("About to call dialog constructor");
+                        dialog = new citizen_list_dialog(citizens);
+                        dialog_open = true;
+
+
+                    }
+                    else
+                    {
+                        dialog.Update();
+                    }
+
 
                 }
             }
+
+            if (dialog_open)
+                if (dialog.close_dialog())
+                {
+                    dialog = null;
+                    dialog_open = false;
+                }
 
         }
 
@@ -46,6 +73,14 @@ namespace city_game
                 spriteBatch.Draw(highlighter, new Vector2(x_pos, y_pos), Color.White);
 
             }
+            if (dialog_open)
+            {
+                dialog.Draw(spriteBatch);
+            }
+        }
+        public override bool is_dialog_open()
+        {
+            return dialog_open;
         }
 
     }

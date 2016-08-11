@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="citizen_names.cs" />
     <Compile Include="Dialogs\base_dialog.cs" />
+    <Compile Include="Dialogs\citizen_list_dialog.cs" />
     <Compile Include="sidebar buttons\build_button.cs" />
     <Compile Include="sidebar buttons\build_mine_button.cs" />
     <Compile Include="sidebar buttons\build_mint_button.cs" />
