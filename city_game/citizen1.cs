@@ -211,6 +211,10 @@ namespace city_game
         {
             return occupation;
         }
+        public string get_name()
+        {
+            return name;
+        }
 
         private double threshold_hunger()
         {

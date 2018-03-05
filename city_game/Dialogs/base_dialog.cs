@@ -36,7 +36,7 @@ namespace city_game
             //Debug.WriteLine("Checking for click");
             if (Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
-                Debug.WriteLine("We have a click");
+                //Debug.WriteLine("We have a click");
                 //for closing the dialog
                 if (Game1.previous_mouse_state.LeftButton == ButtonState.Released
                     && Mouse.GetState().X < x_start + width && Mouse.GetState().X > x_start + width - 30
